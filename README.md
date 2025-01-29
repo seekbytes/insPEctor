@@ -2,7 +2,7 @@
 
 This project is a simple proof of concept to explain various concepts among the domain of reverse engineering and  will be developed in several blog posts in [my blog](https://nicolo.dev). Every concept will be introduced by an  article, and every new feature will be based on a branch that will contain the common core and the new feature.
 
-The idea behind InsPEctor is to have a Rust-based binary analysis software for which we could say some information  (e.g. data flow analysis, CFG, or your own analysis) about PE executable files targeting Intel x86_64 architecture. Among all the articles, we will use the same binary: the goal would be for you to write the software analysis, and extract some precious information about how it works.
+The idea behind InsPEctor is to have a Rust-based binary analysis software for which we could say some information  (e.g. data flow analysis, CFG, or your own analysis) about PE executable files targeting Intel x86_64 architecture. Among all the articles, we will use the same binary: the goal would be for you to write the various analysis, and extract some precious information about how it works and try to guess what it is.
 
 | Date       | Title                                                        | Concept                                                                                                                                                                      | Branch            |
 |------------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
