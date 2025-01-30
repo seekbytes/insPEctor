@@ -6,7 +6,7 @@ The idea behind InsPEctor is to have a Rust-based binary analysis software for w
 
 | Date       | Title                                                        | Concept                                                                                                                                                                      | Branch            |
 |------------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 2025-01-XX | Obtaining instructions: linear sweep and recursive traversal | Explains the first problems of retriving instructions for a given binary, highlighting the two different algorithms for disassembling: linear sweep and recursive traversal. | `1-disassembling` |
+| 2025-01-XX | Obtaining instructions: linear sweep and recursive traversal | Explains the first problems of retriving instructions for a given binary, highlighting the two different algorithms for disassembling: linear sweep and recursive traversal. | [`1-disassembler`](https://github.com/seekbytes/insPEctor/tree/1_disassembler) |
 
 **Warning**: this code represents an experiment and does not represent any valid production-ready code. Be aware that the code may not work for all the cases and for the all binaries.
 
