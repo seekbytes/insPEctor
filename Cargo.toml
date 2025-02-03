@@ -1,0 +1,12 @@
+[package]
+name = "InsPEctor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+env_logger = "0.11.6"
+goblin = "0.9.3"
+nyxstone = "0.1.4"
+pest = "2.7.15"
+pest_derive = "2.7.15"

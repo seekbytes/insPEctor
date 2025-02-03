@@ -1,0 +1,97 @@
+instruction = { opcode ~ (operands ~ ","?)* ~ operands? }
+opcode      = {
+    "xor"
+  | "xchg"
+  | "test"
+  | "sub"
+  | "shr"
+  | "shl"
+  | "setne"
+  | "sete"
+  | "sar"
+  | "ror"
+  | "rol"
+  | "ret"
+  | "rcl"
+  | "out"
+  | "or"
+  | "push"
+  | "pop"
+  | "not"
+  | "nop"
+  | "neg"
+  | "movabs"
+  | "mov"
+  | "lock"
+  | "lea"
+  | "jrcxz"
+  | "jno"
+  | "jne"
+  | "jmp"
+  | "je"
+  | "jl"
+  | "jbe"
+  | "jb"
+  | "ja"
+  | "int3"
+  | "int"
+  | "inc"
+  | "in"
+  | "imul"
+  | "fstp"
+  | "ficomp"
+  | "ficom"
+  | "fcom"
+  | "cmp"
+  | "cmovne"
+  | "cdq"
+  | "call"
+  | "and"
+  | "add"
+}
+
+operands   = { memory | register | immediate }
+hex        = { "0x" ~ ASCII_HEX_DIGIT+ }
+memory     = { (amount_mem ~ "ptr")? ~ "[" ~ memory_expression ~ "]" }
+amount_mem = { "qword"
+| "dword"
+| "word"
+| "byte"
+ }
+
+memory_expression = {
+	register ~ "+" ~ register ~ "*" ~ scale ~ (OP ~ displacement)?
+	| register ~ "+" ~ register ~ (OP ~ scale)?
+	| register ~ displacement
+    | register
+    | displacement }
+
+displacement = { OP ~ immediate }
+scale = { immediate }
+
+register   =  {
+    "rsp"
+  | "rip"
+  | "rdx"
+  | "rdi"
+  | "rcx"
+  | "rbp"
+  | "rbx"
+  | "rax"
+  | "edx"
+  | "ecx"
+  | "ebx"
+  | "eax"
+  | "r9"
+  | "r8"
+  | "bx"
+  | "bl"
+  | "bh"
+  | "ax"
+  | "al"
+  | "ah"
+}
+
+immediate  =  { "-"? ~ hex | "-"? ~ NUMBER+ }
+WHITESPACE = _{ " " | "\t" }
+OP         =  { "+" | "-" }
